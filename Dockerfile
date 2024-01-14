@@ -13,7 +13,7 @@ RUN apt update && apt upgrade -y && \
     ./configure --with-openssl && make && make install && \
     mkdir -p /etc/icecast2 && cp /usr/local/etc/icecast.xml /etc/icecast2 && \
     apt purge build-essential -y && \
-    apt autoremove && apt clean && \
+    apt autoremove -y && apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 CMD /usr/local/bin/icecast -c /etc/icecast2/icecast.xml
