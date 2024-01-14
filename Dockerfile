@@ -8,7 +8,7 @@ ARG ICECAST_KH_VERSION=2.4.0-kh20
 RUN apt update && apt upgrade -y && \
     apt-get install build-essential libxslt-dev libvorbis-dev libxml2 libssl-dev wget -y && \
     wget https://github.com/karlheyes/icecast-kh/archive/refs/tags/icecast-${ICECAST_KH_VERSION}.tar.gz && \
-    tar -xvf icecast-*.tar.gz && \
+    tar -xvf icecast-${ICECAST_KH_VERSION}.tar.gz && rm icecast-${ICECAST_KH_VERSION}.tar.gz && \
     cd icecast-kh-icecast-${ICECAST_KH_VERSION} && \
     ./configure --with-openssl && make && make install && \
     mkdir -p /etc/icecast2 && cp /usr/local/etc/icecast.xml /etc/icecast2 && \
