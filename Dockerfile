@@ -14,6 +14,8 @@ RUN apt update && apt upgrade -y && \
     mkdir -p /etc/icecast2 && cp /usr/local/etc/icecast.xml /etc/icecast2 && \
     apt purge build-essential -y && \
     apt autoremove -y && apt clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*  && \
+    ln -s /usr/local/share/icecast/web /usr/share/icecast2/web && \
+    ln -s /usr/local/share/icecast/admin /usr/share/icecast2/admin
 
 CMD /usr/local/bin/icecast -c /etc/icecast2/icecast.xml
