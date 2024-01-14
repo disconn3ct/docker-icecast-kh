@@ -1,4 +1,9 @@
-## docker-icecast2
+## docker-icecast-kh
+
+This is fork of https://github.com/pltnk/docker-icecast2 repo, but with icecast-kh.
+
+
+===
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/pltnk/docker-icecast2/docker-publish.yml?branch=main)](https://github.com/pltnk/docker-icecast2/actions/workflows/docker-publish.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/pltnk/icecast2)](https://hub.docker.com/r/pltnk/icecast2)

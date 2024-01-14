@@ -2,9 +2,9 @@ version: "3"
 
 services:
 
-  icecast2:
-    image: pltnk/icecast2
-    container_name: icecast2
+  icecast-kh:
+    image: fcqpl/icecast-kh
+    container_name: icecast-kh
     restart: always
     ports:
       - 8000:8000
