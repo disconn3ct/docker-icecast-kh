@@ -17,6 +17,6 @@ RUN apt update && apt upgrade -y && \
     rm -rf /var/lib/apt/lists/*  && \
     ln -s /usr/local/share/icecast /usr/share/icecast2
 
-COPY json-stats/* /usr/local/share/icecast/.
+COPY json-stats/* /usr/local/share/icecast/web/.
 
 CMD /usr/local/bin/icecast -c /etc/icecast2/icecast.xml
