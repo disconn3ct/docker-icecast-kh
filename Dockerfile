@@ -13,7 +13,7 @@ RUN apt update && apt upgrade -y && \
 
 FROM debian:12-slim
 RUN apt update && apt upgrade -y && \
-    apt-get install libxslt1.1 libvorbis0a libvorbisenc2 libxml2 libssl3 media-types -y && \
+    apt-get install libxslt1.1 libvorbis0a libvorbisenc2 libxml2 libssl3 media-types bash -y && \
     apt autoremove -y && apt clean && \
     rm -rf /var/lib/apt/lists/*
 
