@@ -1,4 +1,4 @@
-FROM debian:12-slim as build
+FROM debian:13-slim as build
 
 LABEL github="https://github.com/disconn3ct/docker-icecast-kh"
 
@@ -11,7 +11,7 @@ RUN apt update && apt upgrade -y && \
     cd icecast-kh-icecast-${ICECAST_KH_VERSION} && \
     ./configure --with-openssl --prefix=/opt/icecast && make -j && make install
 
-FROM debian:12-slim
+FROM debian:13-slim
 RUN apt update && apt upgrade -y && \
     apt-get install libxslt1.1 libvorbis0a libvorbisenc2 libxml2 libssl3 media-types bash -y && \
     apt autoremove -y && apt clean && \
